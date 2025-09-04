@@ -1,7 +1,15 @@
-# -------------------------------
-# Fractal Capstone Project Setup
-# -------------------------------
+# Fractal Capstone Project – Online Exam Portal
 
+This is a **full-stack Online Exam Portal** built with **Django (backend)** and **React (frontend)**.  
+The project supports **authentication, exams, and analytics** with modern UI.
+
+---
+
+## 🚀 One-Click Setup (Copy-Paste Commands)
+
+Open terminal and copy-paste the following commands step by step.
+
+```bash
 # 1. Go to project folder
 cd C:\Users\User\Desktop\Online_exam_portal_capstone
 
@@ -13,7 +21,7 @@ venv\Scripts\activate  # Windows
 # 3. Install backend dependencies
 pip install django djangorestframework djangorestframework-simplejwt django-cors-headers mysqlclient transformers
 
-# 4. Setup MySQL database (update in exam_backend/settings.py)
+# 4. Setup MySQL database (update exam_backend/settings.py)
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -36,10 +44,10 @@ python manage.py runserver
 # Frontend Setup (React + Vite + Material UI)
 # -------------------------------
 
-# 7. Open new terminal or stop backend temporarily, go to frontend folder
+# 7. Go to frontend folder
 cd exam-frontend
 
-# 8. Install frontend dependencies
+# 8. Install frontend dependencies (copy-paste ready)
 npm install
 npm install @mui/material @emotion/react @emotion/styled highcharts
 
@@ -51,5 +59,5 @@ npm run dev
 # -------------------------------
 # - Backend runs on http://127.0.0.1:8000
 # - Frontend runs on http://localhost:5173 (default Vite port)
-# - Make sure .env or settings.py has correct DB credentials
+# - Make sure settings.py or .env has correct DB credentials
 # - Virtual environment and node_modules are ignored in .gitignore
