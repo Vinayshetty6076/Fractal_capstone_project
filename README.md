@@ -1,69 +1,55 @@
-# Fractal Capstone Project – Online Exam Portal
+# -------------------------------
+# Fractal Capstone Project Setup
+# -------------------------------
 
-This is a **full-stack Online Exam Portal** built with **Django (backend)** and **React (frontend)**.  
-The project supports **authentication, exams, and analytics** with modern UI.
+# 1. Go to project folder
+cd C:\Users\User\Desktop\Online_exam_portal_capstone
 
----
-
-## 🚀 Project Setup
-
-### 📌 Backend (Django + MySQL)
-
-1. **Create & Activate Virtual Environment**
-
-```bash
-# Windows
+# 2. Create & activate Python virtual environment
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # Linux/Mac
 
-# Linux/Mac
-python3 -m venv venv
-source venv/bin/activate
-Install Backend Dependencies
-
-bash
-Copy code
+# 3. Install backend dependencies
 pip install django djangorestframework djangorestframework-simplejwt django-cors-headers mysqlclient transformers
-Database Setup (MySQL Example)
-Update your settings.py:
 
-python
-Copy code
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'exam_db',
-        'USER': 'root',
-        'PASSWORD': 'yourpassword',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
-Apply Migrations
+# 4. Setup MySQL database (update in exam_backend/settings.py)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'exam_db',
+#         'USER': 'root',
+#         'PASSWORD': 'yourpassword',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
-bash
-Copy code
+# 5. Apply Django migrations
 python manage.py makemigrations
 python manage.py migrate
-Run Backend Server
 
-bash
-Copy code
+# 6. Run Django backend server
 python manage.py runserver
-📌 Frontend (React + Vite + Material UI)
-Go to frontend folder
 
-bash
-Copy code
+# -------------------------------
+# Frontend Setup (React + Vite + Material UI)
+# -------------------------------
+
+# 7. Open new terminal or stop backend temporarily, go to frontend folder
 cd exam-frontend
-Install Frontend Dependencies
 
-bash
-Copy code
+# 8. Install frontend dependencies
 npm install
 npm install @mui/material @emotion/react @emotion/styled highcharts
-Start Frontend
 
-bash
-Copy code
+# 9. Run React frontend
 npm run dev
+
+# -------------------------------
+# Notes
+# -------------------------------
+# - Backend runs on http://127.0.0.1:8000
+# - Frontend runs on http://localhost:5173 (default Vite port)
+# - Make sure .env or settings.py has correct DB credentials
+# - Virtual environment and node_modules are ignored in .gitignore
