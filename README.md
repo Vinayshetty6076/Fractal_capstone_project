@@ -5,7 +5,7 @@ The project supports **authentication, exams, and analytics** with modern UI.
 
 ---
 
-## 🚀 One-Click Setup (Copy-Paste Commands)
+## 🚀 full-stack Online Exam Portal (complete setup)
 
 Open terminal and copy-paste the following commands step by step.
 
