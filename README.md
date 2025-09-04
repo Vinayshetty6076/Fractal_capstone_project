@@ -10,32 +10,26 @@ The project supports **authentication, exams, and analytics** with modern UI.
 ### 📌 Backend (Django + MySQL)
 
 1. **Create & Activate Virtual Environment**
-   ```bash
-   Windows
-   python -m venv venv
-   venv\Scripts\activate
 
-2. Install Dependencies
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
 
-   pip install django djangorestframework djangorestframework-simplejwt django-cors-headers mysqlclient transformers
+# Linux/Mac
+python3 -m venv venv
+source venv/bin/activate
+Install Backend Dependencies
 
-   - django → Main framework
+bash
+Copy code
+pip install django djangorestframework djangorestframework-simplejwt django-cors-headers mysqlclient transformers
+Database Setup (MySQL Example)
+Update your settings.py:
 
-   - djangorestframework → API support
-
-   - djangorestframework-simplejwt → JWT authentication
-
-   - django-cors-headers → CORS for frontend communication
-
-   - mysqlclient → MySQL database connector
-
-   - transformers + gpt2 → AI/NLP model support
-
-3. Database Setup (MySQL Example) (optional) if you want mysql workbench
-
-   settings.py: update in django file
-
-   DATABASES = {
+python
+Copy code
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'exam_db',
@@ -45,25 +39,31 @@ The project supports **authentication, exams, and analytics** with modern UI.
         'PORT': '3306',
     }
 }
+Apply Migrations
 
+bash
+Copy code
+python manage.py makemigrations
+python manage.py migrate
+Run Backend Server
 
-4.  Apply Migrations
-
-     python manage.py makemigrations
-   
-     python manage.py migrate
-
-5.  Run Server
-
-     python manage.py runserver
-
+bash
+Copy code
+python manage.py runserver
 📌 Frontend (React + Vite + Material UI)
+Go to frontend folder
 
+bash
+Copy code
+cd exam-frontend
+Install Frontend Dependencies
 
+bash
+Copy code
+npm install
+npm install @mui/material @emotion/react @emotion/styled highcharts
+Start Frontend
 
- 
-
-   
-
-
-  
+bash
+Copy code
+npm run dev
